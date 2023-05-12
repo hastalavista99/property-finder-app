@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+  get 'dashboard/properties'
+  get 'dashboard/reports'
   resources :properties
+
+  devise_scope :account do
+    get 'accounts/sign_out' => 'devise/sessions#destroy'
+  end
   devise_for :accounts
+
+
   #get 'home/index'
 
   root to: 'home#index'
