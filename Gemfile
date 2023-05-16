@@ -26,6 +26,13 @@ gem "stimulus-rails"
 
 gem "devise"
 
+#image uploads to Amazon S3
+gem "carrierwave", "0.10.0"
+gem "fog", "~>1.37.0"
+
+#image resizing
+gem "mini_magick"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
@@ -58,6 +65,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "figaro"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

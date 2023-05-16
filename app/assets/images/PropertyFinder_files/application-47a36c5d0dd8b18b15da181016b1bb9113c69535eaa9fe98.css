@@ -1,0 +1,180 @@
+/* line 1, app/assets/stylesheets/dashboard.scss */
+.show-sidebar {
+  /*
+   * Sidebar
+   */
+  /*
+   * Navbar
+   */
+}
+
+/* line 3, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+/* line 13, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  /* Behind the navbar */
+  padding: 48px 0 0;
+  /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767.98px) {
+  /* line 24, app/assets/stylesheets/dashboard.scss */
+  .show-sidebar .sidebar {
+    top: 5rem;
+  }
+}
+
+/* line 29, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports (position: -webkit-sticky) or (position: sticky) {
+  /* line 39, app/assets/stylesheets/dashboard.scss */
+  .show-sidebar .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+/* line 45, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+/* line 50, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
+
+/* line 55, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .sidebar .nav-link.active {
+  color: #007bff;
+}
+
+/* line 59, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .sidebar .nav-link:hover .feather,
+.show-sidebar .sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+/* line 64, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/* line 73, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 81, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .navbar .navbar-toggler {
+  top: .25rem;
+  right: 1rem;
+}
+
+/* line 86, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+/* line 92, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* line 98, app/assets/stylesheets/dashboard.scss */
+.show-sidebar .form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+/* line 1, app/assets/stylesheets/devise.scss */
+.form-auth {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  margin-top: 60px;
+}
+
+/* line 8, app/assets/stylesheets/devise.scss */
+.form-auth .checkbox {
+  font-weight: 400;
+}
+
+/* line 12, app/assets/stylesheets/devise.scss */
+.form-auth .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* line 20, app/assets/stylesheets/devise.scss */
+.form-auth .form-control:focus {
+  z-index: 2;
+}
+
+/* line 24, app/assets/stylesheets/devise.scss */
+.form-auth input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* line 30, app/assets/stylesheets/devise.scss */
+.form-auth input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 36, app/assets/stylesheets/devise.scss */
+.form-auth .btn-block {
+  margin-bottom: 40px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */

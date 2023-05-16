@@ -1,21 +1,79 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>PropertyFinder</title>
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="yZDI7nSy0a1QkvssbwIswALuJYFVT1Y1vBv8qTLmoueExRcGFVJ1Kd2hzxOJFLApmDZyoG4EFiD9pz-1rHRSJg">
+    
+
+    <link rel="stylesheet" href="PropertyFinder_files/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="PropertyFinder_files/application-47a36c5d0dd8b18b15da181016b1bb9113c69535eaa9fe98.css" media="all">
+
+
+
+  </head>
+  <body id="properties" class="show " data-new-gr-c-s-check-loaded="8.906.0" data-gr-ext-installed="">
+      <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Property Finder</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:3000/dashboard">Dashboard</a>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Latest</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Advertising</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" rel="nofollow" data-method="delete" href="http://localhost:3000/accounts/sign_out">Log Out</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+      </header>
+      <p id="notice"></p>
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <%= link_to dashboard_path, class: "nav-link" do %>
+            <a class="nav-link" href="http://localhost:3000/dashboard">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
               Dashboard <span class="sr-only">(current)</span>
-            <% end %>
-          </li>
+</a>          </li>
           <li class="nav-item">
-            <%= link_to properties_path, class: "nav-link" do %>
-              <i data-feather="package"></i>
+            <a class="nav-link" href="http://localhost:3000/properties">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package"><path d="M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.1-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.78 0z"></path><polyline points="2.32 6.16 12 11 21.68 6.16"></polyline><line x1="12" y1="22.76" x2="12" y2="11"></line><line x1="7" y1="3.5" x2="17" y2="8.5"></line></svg>
               Properties
-            <% end %>
-          </li>
+</a>          </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <i data-feather="gift"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-gift"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
               Products
             </a>
           </li>
@@ -73,3 +131,51 @@
         </ul>
       </div>
     </nav>
+
+<p class="mt-5">
+  <strong>Name:</strong>
+  Large 5 bedroom House
+</p>
+
+<p>
+  <strong>Address:</strong>
+  39th street, Nairobi
+</p>
+
+<p>
+  <strong>Price:</strong>
+  100000
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  5
+</p>
+
+<p>
+  <strong>Bathrooms:</strong>
+  3
+</p>
+
+
+<a class="btn btn-success" href="http://localhost:3000/properties/1/edit">Edit property</a>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="PropertyFinder_files/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="PropertyFinder_files/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="PropertyFinder_files/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="PropertyFinder_files/feather.min.js"></script>
+    <script>feather.replace()</script>
+
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
