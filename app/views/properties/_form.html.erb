@@ -2,28 +2,38 @@
   <%= render "layouts/validation", item: @property %>
 
   <div class="form-group">
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name %>
     <%= form.text_field :name, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :address, style: "display: block" %>
+    <%= form.label :address %>
     <%= form.text_field :address, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :price, style: "display: block" %>
+    <%= form.label :price %>
     <%= form.number_field :price, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :rooms, style: "display: block" %>
+    <%= form.label :rooms %>
     <%= form.number_field :rooms, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :bathrooms, style: "display: block" %>
+    <%= form.label :bathrooms %>
     <%= form.number_field :bathrooms, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :parking_spaces %>
+    <%= form.number_field :parking_spaces, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :details %>
+    <%= form.text_area :details, class: "form-control" %>
   </div>
 
   <div class="form-group">
