@@ -11,6 +11,7 @@ class PropertiesController < ApplicationController
   # GET /properties/1 or /properties/1.json
   def show
     @agent = @property.account
+    @agent_properties = Property.where(account_id: @agent.id).where.not(id: @property.id)
   end
 
   # GET /properties/new
@@ -60,6 +61,18 @@ class PropertiesController < ApplicationController
       format.json { head :no_content }
     end
   end
+=begin
+  def email_agent
+    #trigger email send
+    first_name = params[:first_name]
+    last_name = params[:last_name]
+    email = params[:email]
+    message = params[:message]
+
+    #response to script
+    foramt.json { head :no_content }
+  end
+=end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -73,6 +86,6 @@ class PropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :parking_spaces, :details, :photo, :photo_cache)
+      params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :parking_spaces, :for_sale, :available_date, :details, :photo, :photo_cache)
     end
 end

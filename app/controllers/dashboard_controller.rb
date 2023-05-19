@@ -6,7 +6,8 @@ class DashboardController < ApplicationController
   def properties
     end
 
-  def reports
+  def profile
+    @account = Account.find(params[:id])
   end
 
   private

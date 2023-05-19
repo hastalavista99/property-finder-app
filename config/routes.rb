@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get  "/dashboard" => 'dashboard#index', as: :dashboard
+  get  "/profile/:id" => 'dashboard#profile', as: :profile
   get 'dashboard/properties'
   get 'dashboard/reports'
   resources :properties
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
   end
   devise_for :accounts
 
+  post "agent/message" => "properties#email_agent", as: :email_agent
 
   #get 'home/index'
 
