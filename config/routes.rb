@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :accounts
   resources :posts
-
+  resources :properties
+  
   #admin routes
   get  "/accounts" => 'admin#accounts', as: :accounts
 
@@ -9,12 +11,12 @@ Rails.application.routes.draw do
   get  "/profile/:id" => 'dashboard#profile', as: :profile
   get 'dashboard/properties'
   get 'dashboard/reports'
-  resources :properties
+
 
   devise_scope :account do
     get 'accounts/sign_out' => 'devise/sessions#destroy'
   end
-  devise_for :accounts
+
 
   post "agent/message" => "properties#email_agent", as: :email_agent
 
