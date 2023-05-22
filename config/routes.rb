@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
 
   #admin routes
   get  "/accounts" => 'admin#accounts', as: :accounts
