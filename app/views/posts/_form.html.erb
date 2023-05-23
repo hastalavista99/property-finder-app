@@ -32,8 +32,13 @@
   </div>
 
   <div class="form-group">
-    <%= form.label :image, style: "display: block" %>
-    <%= form.text_field :image, class: "form-control" %>
+    <%= form.label :image %>
+    <%= form.file_field :image, class: "form-control" %>
+    <%= form.hidden_field :image_cache %>
+
+    <% if @post.image.present? %>
+      <%= image_tag @posts.image.thumb.url, class: "mt-4" %>
+    <% end %>
   </div>
 
   <div class="form-group">

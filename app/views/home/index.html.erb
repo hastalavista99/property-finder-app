@@ -19,6 +19,19 @@
     </div>
   </section>
 
+  <section id="latest-posts" class="mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3 class=""mb-4>Latest News</h3>
+        </div>
+      </div>
+      <div class="row">
+        <%= render "posts/list", posts: @posts %>
+      </div>
+    </div>
+  </section>
+
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
