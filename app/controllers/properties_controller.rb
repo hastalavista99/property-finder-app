@@ -61,7 +61,7 @@ class PropertiesController < ApplicationController
       format.json { head :no_content }
     end
   end
-=begin
+
   def email_agent
     #trigger email send
     agent_id = params[:agent_id]
@@ -77,7 +77,7 @@ class PropertiesController < ApplicationController
       format.json { head :no_content }
     end
   end
-=end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

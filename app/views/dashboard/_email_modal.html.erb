@@ -3,12 +3,12 @@
 <div id="emailModal" class="modal" tabindex="-1">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title">New message for <%= @agent.first_name %></h5>
+      <h5 class="modal-title">New message for <%= @account.first_name %></h5>
       <button type="button" class="close" id="closeModal">&times;</button>
     </div>
     <div class="modal-body">
       <%= form_tag email_agent_path, id: "email-agent" do %>
-        <%= hidden_field_tag :agent_id, @agent.id %>
+        <%= hidden_field_tag :agent_id, @account.id %>
         <div class="form-group">
           <label for="message-text" class="col-form-label">First Name:</label>
           <%= text_field_tag :first_name, nil, id: "message-first-name", class: "form-control" %>
