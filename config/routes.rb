@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'dashboard/properties'
   get 'dashboard/reports'
 
+  get 'search' => 'properties#search'
+
 
   devise_scope :account do
     get 'accounts/sign_out' => 'devise/sessions#destroy'

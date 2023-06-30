@@ -8,6 +8,11 @@ class PropertiesController < ApplicationController
     @properties = Property.all
   end
 
+  # to enable search bar functionality
+  def search
+    @properties = Property.where("name LIKE ?", "%" + params[:q] + "%")
+  end
+
   # GET /properties/1 or /properties/1.json
   def show
     @agent = @property.account
