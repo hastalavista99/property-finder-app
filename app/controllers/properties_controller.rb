@@ -1,7 +1,7 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: %i[ show edit update destroy ]
   before_action :authenticate_account!, only: [:new, :create, :destroy]
-  before_action :set_sidebar, except: [:show]
+  before_action :set_sidebar, except: [:show, :search]
 
   # GET /properties or /properties.json
   def index
@@ -11,6 +11,7 @@ class PropertiesController < ApplicationController
   # to enable search bar functionality
   def search
     @properties = Property.where("name LIKE ?", "%" + params[:q] + "%")
+    @properties = Property.where("address LIKE ?", "%" + params[:q] + "%")
   end
 
   # GET /properties/1 or /properties/1.json
