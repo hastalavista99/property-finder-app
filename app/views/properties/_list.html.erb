@@ -26,6 +26,13 @@
 
 
           <p class="mt-2"><%= property.address %></p>
+          <p class="mt-1 h3">
+            <% if property.for_sale %>
+              <%= number_to_currency(property.price, precision: 0)%>
+            <% else %>
+              <%= number_to_currency(property.price, precision: 0)%>/month
+            <% end %>
+            </p>
         </div>
 
     </div>
