@@ -10,6 +10,7 @@ class PropertiesController < ApplicationController
 
   # to enable search bar functionality
   def search
+
     @properties = Property.where("name LIKE ?", "%" + params[:q] + "%")
     @properties = Property.where("address LIKE ?", "%" + params[:q] + "%")
   end
