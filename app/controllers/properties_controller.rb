@@ -23,7 +23,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/new
   def new
-    @property = Property.new
+    @property = current_account.properties.build
   end
 
   # GET /properties/1/edit
@@ -32,7 +32,7 @@ class PropertiesController < ApplicationController
 
   # POST /properties or /properties.json
   def create
-    @property = Property.new(property_params)
+    @property = current_account.properties.build(property_params)
     @property.account_id = current_account.id
 
     respond_to do |format|

@@ -1,9 +1,9 @@
-Hi <%= @agent.first_name %>,
+<p>Hi <%= @agent.first_name %>,</p>
 
-You have a new message from Property Finder.
+<p>You have a new message from Property Finder.</p>
 
-First name: <%= @first_name %>
-Last name: <%= @last_name %>
-Email: <%= @email %>
+<p>First name: <%= @first_name %><br />
+Last name: <%= @last_name %><br />
+Email: <%= @email %></p>
 
-<%= @message %>
+<%= simple_format @message %>

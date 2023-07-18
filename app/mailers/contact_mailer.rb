@@ -9,7 +9,7 @@ class ContactMailer < ApplicationMailer
     @email = email
     @message = message
 
-    if agent.present?
+    if @agent.present?
       mail to: @agent.email, message: "You have a new contact from Property Finder"
     end
   end
