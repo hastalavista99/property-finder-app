@@ -40,11 +40,11 @@ closeButton.addEventListener("click", function() {
 
 sendButton.addEventListener("click", function() {
   // Handle send message functionality
-  const agent_id = document.getElementById("agent_id").value;
-  const first_name = document.getElementById("message-first-name").value;
-  const last_name = document.getElementById("message-last-name").value;
-  const email = document.getElementById("message-email").value;
-  const message = document.getElementById("message-text").value;
+  let agent_id = document.getElementById("agent_id").value;
+  let first_name = document.getElementById("message-first-name").value;
+  let last_name = document.getElementById("message-last-name").value;
+  let email = document.getElementById("message-email").value;
+  let message = document.getElementById("message-text").value;
 
   fetch("/agent/message", {
     method: "POST",

@@ -2,51 +2,15 @@
 
 <div class="container mt-5 pt-3">
     <div class="col">
-          <h3 class="mb-3">Search Results</h3>
-        </div>
-    <div class="row ">
-
-        <% @properties.each do |property| %>
-            <div class="col">
-                <div class="p-3 border bg-light"><div class="property-thumb" style="background-image: url(<%= property_photo_url(property) %>)">
-                    <%= link_to "", property_path(property) %>
-                </div>
-
-                <div class="property-summary p-3">
-                    <h3 class="h5"><%= link_to property.name, property_path(property) %></h3>
-
-
-                    <span class="mr-2">
-                        <%= property.rooms %>
-                        <i class="fa-solid fa-bed text-muted ml-1"></i>
-                    </span>
-                    <span class="mr-2">
-                        <%= property.bathrooms %>
-                        <i class="fa-solid fa-bath text-muted ml-1"></i>
-                    </span>
-                    <span class="mr-2">
-                        <%= property.parking_spaces %>
-                        <i class="fa-solid fa-car text-muted ml-1"></i>
-                    </span>
-
-
-                    <p class="mt-2"><%= property.address %></p>
-                    <p class="mt-1 h3">
-                        <% if property.for_sale %>
-                            <%= number_to_currency(property.price, precision: 0)%>
-                        <% else %>
-                            <%= number_to_currency(property.price, precision: 0)%>/month
-                        <% end %>
-                    </p>
-                </div>
-            </div>
-        <% end %>
+        <h3 class="mb-3">Search Results</h3>
     </div>
-</div>
+    <div class="row">
+        <%= render "properties/list", properties: @properties %>
+    </div>
 
 
-<div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-end py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
         <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
         <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
